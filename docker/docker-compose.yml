@@ -22,7 +22,8 @@ services:
       # See docs/TROUBLESHOOTING.md §9 for details.
       - "5005:5005/udp"
     environment:
-      - RUVIEW_BIND_ADDR=127.0.0.1
+      - RUVIEW_BIND_ADDR=0.0.0.0
+      - RUVIEW_ALLOW_UNAUTHENTICATED=1
       - RUST_LOG=info
       # CSI_SOURCE controls the data source for the sensing server.
       # Options: auto (default) — probe for ESP32 UDP then host WiFi; **fail
