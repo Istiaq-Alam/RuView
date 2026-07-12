@@ -1,0 +1,18 @@
+# Setup
+
+1. cd ~/RuView/docker
+docker compose up -d
+
+2. Connect the ESP32.
+3. python provision.py \
+    --port /dev/ttyACM0 \
+    --ssid "YourWiFi" \
+    --password "YourPassword" \
+    --target-ip 192.168.1.100 
+    
+    
+    
+    target-ip will be the device ip of the laptop. 
+    port is the connected ESP32 port
+    ssid and password should upload manually 
+4. idf.py -p /dev/ttyACM0 monitor
